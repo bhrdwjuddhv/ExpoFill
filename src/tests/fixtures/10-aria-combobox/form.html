@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>AI Summit 2026 | Registration</title></head>
+<body>
+  <form>
+    <div class="field">
+      <label for="nm">Name</label><input id="nm" name="attendee_name">
+    </div>
+    <div class="field">
+      <span id="g-label">Gender</span>
+      <div class="select" role="combobox" tabindex="0" aria-labelledby="g-label" aria-expanded="false" aria-haspopup="listbox" aria-controls="g-list">
+        <span>Choose…</span>
+      </div>
+      <ul role="listbox" id="g-list" hidden>
+        <li role="option">Male</li><li role="option">Female</li><li role="option">Prefer not to say</li>
+      </ul>
+    </div>
+    <div class="field">
+      <label for="st">State</label>
+      <div class="select__control">
+        <div class="select__value-container"><div class="select__placeholder">Select…</div>
+          <input id="st" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="st-list" autocomplete="off">
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <span id="ts-l">T-Shirt Size</span>
+      <button type="button" aria-haspopup="listbox" aria-labelledby="ts-l">Select size</button>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+  <script>
+    // Widget behaviour, like a typical UI library.
+    const pick = (box, list, shown) => list.addEventListener('click', (e) => {
+      const opt = e.target.closest('[role=option]');
+      if (!opt) return;
+      list.querySelectorAll('[role=option]').forEach((o) => o.setAttribute('aria-selected', String(o === opt)));
+      shown.textContent = opt.textContent;
+      list.hidden = true;
+      box.setAttribute('aria-expanded', 'false');
+    });
+    // Gender: div[role=combobox] opens its listbox on click.
+    const g = document.querySelector('div[role=combobox]');
+    const gList = document.getElementById('g-list');
+    g.addEventListener('click', () => { gList.hidden = false; g.setAttribute('aria-expanded', 'true'); });
+    pick(g, gList, g.querySelector('span'));
+    // State: searchable combobox; options render only while open (on mousedown, like React Select).
+    const st = document.getElementById('st');
+    st.addEventListener('mousedown', () => {
+      if (document.getElementById('st-list')) return;
+      const ul = document.createElement('ul');
+      ul.id = 'st-list';
+      ul.setAttribute('role', 'listbox');
+      ul.innerHTML = ['Karnataka', 'Maharashtra', 'Tamil Nadu'].map((x) => '<li role="option">' + x + '</li>').join('');
+      st.closest('.field').appendChild(ul);
+      st.setAttribute('aria-expanded', 'true');
+      ul.addEventListener('click', (e) => {
+        const opt = e.target.closest('[role=option]');
+        st.value = opt.textContent;
+        ul.remove();
+      });
+    });
+    // T-shirt: a <button type="button"> opening a popup list at the end of <body>.
+    const ts = document.querySelector('button[aria-haspopup]');
+    ts.addEventListener('click', () => {
+      const ul = document.createElement('ul');
+      ul.setAttribute('role', 'listbox');
+      ul.innerHTML = ['S', 'M', 'L', 'XL'].map((x) => '<li role="option">' + x + '</li>').join('');
+      document.body.appendChild(ul);
+      pick(ts, ul, ts);
+    });
+  </script>
+</body>
+</html>

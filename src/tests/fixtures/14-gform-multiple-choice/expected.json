@@ -1,0 +1,7 @@
+{
+  "Name": "fullName",
+  "Gender": "gender",
+  "Which year are you in?": "yearOfStudy",
+  "You are a": "attendeeType",
+  "How did you hear about this event?": "howDidYouHear"
+}

@@ -1,0 +1,6 @@
+{
+  "#nm": "fullName",
+  "div[role=combobox]": "gender",
+  "#st": "state",
+  "button[aria-haspopup]": "tshirtSize"
+}

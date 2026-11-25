@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>DevFest Pune 2026 - Google Forms</title></head>
+<body>
+<form class="Xu9a1b">
+  <div role="heading" aria-level="1" class="F9yp7e">DevFest Pune 2026</div>
+  <div role="list" class="o3Dpx">
+    <div role="listitem" class="Qr7Oae">
+      <div class="geS5n">
+        <div role="heading" aria-level="3" class="HoXoMd"><span>Organisation / Company</span></div>
+        <input type="text" class="whsOnd">
+      </div>
+    </div>
+    <div role="listitem" class="Qr7Oae">
+      <div class="geS5n">
+        <div role="heading" aria-level="3" class="HoXoMd"><span>Designation</span></div>
+        <input type="text" class="whsOnd">
+      </div>
+    </div>
+    <div role="listitem" class="Qr7Oae">
+      <div class="geS5n">
+        <div role="heading" aria-level="3" class="HoXoMd"><span>Tracks you are interested in</span><span aria-label="Required question"> *</span></div>
+        <div role="list" class="Y6Myld">
+          <div role="listitem" class="eBFwI"><label class="docssharedWizToggleLabeledContainer"><div role="checkbox" class="uVccjd" data-answer-value="Artificial Intelligence" aria-label="Artificial Intelligence" aria-checked="false" tabindex="0"></div><span>Artificial Intelligence</span></label></div>
+          <div role="listitem" class="eBFwI"><label class="docssharedWizToggleLabeledContainer"><div role="checkbox" class="uVccjd" data-answer-value="Web" aria-label="Web" aria-checked="false"></div><span>Web</span></label></div>
+          <div role="listitem" class="eBFwI"><label class="docssharedWizToggleLabeledContainer"><div role="checkbox" class="uVccjd" data-answer-value="Cloud" aria-label="Cloud" aria-checked="false"></div><span>Cloud</span></label></div>
+          <div role="listitem" class="eBFwI"><label class="docssharedWizToggleLabeledContainer"><div role="checkbox" class="uVccjd" data-answer-value="Information Security" aria-label="Information Security" aria-checked="false"></div><span>Information Security</span></label></div>
+          <div role="listitem" class="eBFwI"><label class="docssharedWizToggleLabeledContainer"><div role="checkbox" class="uVccjd" data-answer-value="__other_option__" aria-label="Other:" aria-checked="false"></div><span>Other:</span></label></div>
+        </div>
+      </div>
+    </div>
+    <div role="listitem" class="Qr7Oae">
+      <div class="geS5n">
+        <div role="heading" aria-level="3" class="HoXoMd"><span>Code of conduct</span><span aria-label="Required question"> *</span></div>
+        <div role="list" class="Y6Myld">
+          <div role="listitem" class="eBFwI"><label><div role="checkbox" data-answer-value="I agree to follow the code of conduct" aria-label="I agree to follow the code of conduct" aria-checked="false"></div><span>I agree to follow the code of conduct</span></label></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<script>
+// Google Forms behaviour: radios are exclusive within a radiogroup, checkboxes toggle.
+document.addEventListener('click', (e) => {
+  const radio = e.target.closest('[role=radio]');
+  if (radio) radio.closest('[role=radiogroup]').querySelectorAll('[role=radio]').forEach((r) => r.setAttribute('aria-checked', String(r === radio)));
+  const box = e.target.closest('[role=checkbox]');
+  if (box) box.setAttribute('aria-checked', String(box.getAttribute('aria-checked') !== 'true'));
+});
+</script>
+</body>
+</html>

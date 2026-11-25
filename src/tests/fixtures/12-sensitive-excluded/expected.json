@@ -1,0 +1,20 @@
+{
+  "#u": "email",
+  "#p": "excluded",
+  "#otp": "excluded",
+  "#cap": "excluded",
+  "#cn": "excluded",
+  "#cvv": "excluded",
+  "#exp": "excluded",
+  "#upi": "excluded",
+  "#ifsc": "excluded",
+  "#aad": "excluded",
+  "#pan": "excluded",
+  "input[name=csrf]": "excluded",
+  "#ref": "excluded",
+  "#ev": "excluded",
+  "#trap": "excluded",
+  "#hid": "excluded",
+  "#cv": "excluded",
+  "#ah": "excluded"
+}

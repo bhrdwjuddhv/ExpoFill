@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Women in Tech Conference 2026</title></head>
+<body>
+  <form>
+    <div class="question"><label for="em">Email</label><input id="em" type="email" name="email"></div>
+    <fieldset>
+      <legend>Gender</legend>
+      <label><input type="radio" name="gender" value="M"> Male</label>
+      <label><input type="radio" name="gender" value="F"> Female</label>
+      <label><input type="radio" name="gender" value="O"> Other</label>
+    </fieldset>
+    <div class="question">
+      <p class="q-title">Areas of Interest *</p>
+      <div class="opt"><input type="checkbox" id="i1" name="interests[]" value="ai"><label for="i1">AI / ML</label></div>
+      <div class="opt"><input type="checkbox" id="i2" name="interests[]" value="web"><label for="i2">Web Development</label></div>
+      <div class="opt"><input type="checkbox" id="i3" name="interests[]" value="cyber"><label for="i3">Cyber Security</label></div>
+      <div class="opt"><input type="checkbox" id="i4" name="interests[]" value="other"><label for="i4">Other</label></div>
+    </div>
+    <div class="question">
+      <p>You are a</p>
+      <label><input type="radio" name="type" value="student">Student</label>
+      <label><input type="radio" name="type" value="pro">Working Professional</label>
+      <label><input type="radio" name="type" value="founder">Founder</label>
+    </div>
+    <div class="question">
+      <p>Food preference</p>
+      <label><input type="radio" name="food" value="veg">Veg</label>
+      <label><input type="radio" name="food" value="nonveg">Non-Veg</label>
+    </div>
+    <div class="question">
+      <p>T-shirt size</p>
+      <span><input type="radio" name="size" value="S">S</span>
+      <span><input type="radio" name="size" value="M">M</span>
+      <span><input type="radio" name="size" value="L">L</span>
+    </div>
+    <div><input type="checkbox" id="newsletter" name="newsletter"><label for="newsletter">Send me updates about future events</label></div>
+    <div><input type="checkbox" id="terms" name="terms" required><label for="terms">I agree to the Terms &amp; Conditions</label></div>
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>

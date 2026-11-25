@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ExpoFill design: Bauhaus geometry + Swiss editorial + 70s retro type.
+   Palette: Tofu Green, Electric Purple, Vibrant Orange, Black, Warm Off-White, White. */
+@layer base {
+  html {
+    @apply bg-paper font-sans text-base text-ink antialiased dark:bg-ink dark:text-paper;
+  }
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-violet dark:outline-tofu;
+  }
+  ::selection {
+    @apply bg-tofu text-ink;
+  }
+}
+
+@layer components {
+  .display {
+    @apply font-display uppercase leading-[0.95] tracking-tight;
+  }
+  .card {
+    @apply rounded-card border border-ink/10 bg-white shadow-[0_1px_0_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.12)] dark:border-white/10 dark:bg-neutral-900;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 font-medium transition duration-150 ease-out hover:scale-[1.02] active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50 motion-reduce:transform-none motion-reduce:transition-none;
+  }
+  .btn-primary {
+    @apply btn bg-violet text-white hover:bg-[#4b4ee0];
+  }
+  .btn-go {
+    @apply btn bg-tofu text-ink hover:bg-[#00b354];
+  }
+  .btn-warn {
+    @apply btn bg-blaze text-ink hover:bg-[#e85300];
+  }
+  .btn-ghost {
+    @apply btn border border-ink/15 bg-transparent hover:bg-ink/5 dark:border-white/20 dark:hover:bg-white/10;
+  }
+  .input {
+    @apply w-full rounded-xl border border-ink/15 bg-white px-3 py-2 text-ink placeholder:text-ink/40 dark:border-white/15 dark:bg-neutral-950 dark:text-paper dark:placeholder:text-paper/40;
+  }
+  .label {
+    @apply mb-1 block text-xs font-semibold uppercase tracking-wider text-ink/70 dark:text-paper/70;
+  }
+  .muted {
+    @apply text-ink/60 dark:text-paper/60;
+  }
+}

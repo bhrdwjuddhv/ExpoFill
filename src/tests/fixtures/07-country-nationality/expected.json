@@ -1,0 +1,10 @@
+{
+  "input[name=fullname]": "fullName",
+  "select[name=nationality]": "unknown",
+  "select[name=country]": "country",
+  "select[name=cc]": "phoneCountryCode",
+  "input[name=phone]": "phone",
+  "input[name=citizenship]": "unknown",
+  "input[name=state]": "state",
+  "input[name=zip]": "postalCode"
+}

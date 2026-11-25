@@ -1,0 +1,10 @@
+{
+  "input[placeholder='Your Name']": "fullName",
+  "input[placeholder=Organisation]": "organization",
+  "input[placeholder='Job Title']": "designation",
+  "input[type=email]": "email",
+  "input[type=tel]": "phone",
+  "input[type=url]": "linkedin",
+  "input[placeholder=City]": "city",
+  "input[placeholder='Twitter / X handle']": "twitter"
+}

@@ -1,0 +1,10 @@
+{
+  "#em": "email",
+  "input[name=gender]": "gender",
+  "#i1": "interests",
+  "input[name=type]": "attendeeType",
+  "input[name=food]": "dietaryPreference",
+  "input[name=size]": "tshirtSize",
+  "#newsletter": "unknown",
+  "#terms": "excluded"
+}

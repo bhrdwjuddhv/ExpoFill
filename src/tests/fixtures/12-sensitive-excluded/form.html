@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Cloud Expo 2026 | Paid Registration</title></head>
+<body>
+  <form>
+    <p><label for="u">Email</label><input id="u" type="email" name="email"></p>
+    <p><label for="p">Create Password</label><input id="p" type="password" name="password"></p>
+    <p><label for="otp">Enter OTP</label><input id="otp" name="otp" autocomplete="one-time-code"></p>
+    <p><label for="cap">Enter the characters shown (CAPTCHA)</label><input id="cap" name="captcha_text"></p>
+    <iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?k=test" width="304" height="78"></iframe>
+    <p><label for="cn">Card Number</label><input id="cn" name="cardnumber" autocomplete="cc-number"></p>
+    <p><label for="cvv">CVV</label><input id="cvv" name="cvv" maxlength="4"></p>
+    <p><label for="exp">Expiry (MM/YY)</label><input id="exp" name="exp"></p>
+    <p><label for="upi">UPI ID</label><input id="upi" name="upi"></p>
+    <p><label for="ifsc">IFSC Code</label><input id="ifsc" name="ifsc"></p>
+    <p><label for="aad">Aadhaar Number</label><input id="aad" name="aadhaar"></p>
+    <p><label for="pan">PAN</label><input id="pan" name="pan"></p>
+    <input type="hidden" name="csrf" value="token">
+    <p><label for="ref">Referral Code</label><input id="ref" name="ref" disabled></p>
+    <p><label for="ev">Event</label><input id="ev" name="event" value="Cloud Expo" readonly></p>
+    <p><label for="trap">Name</label><input id="trap" name="website_hp" style="width:0;height:0;border:0;padding:0"></p>
+    <p style="display:none"><label for="hid">Company</label><input id="hid" name="hidden_company"></p>
+    <p><label for="cv">Upload resume</label><input type="file" id="cv" name="cv"></p>
+    <p><label for="ah">Organisation</label><input id="ah" name="org" aria-hidden="true"></p>
+    <button type="submit">Pay ₹499 &amp; Register</button>
+  </form>
+</body>
+</html>

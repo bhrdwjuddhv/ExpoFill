@@ -1,0 +1,7 @@
+{
+  "input[aria-labelledby=lbl-name]": "fullName",
+  "input[aria-labelledby=lbl-email]": "email",
+  "input[aria-label='Phone number']": "phone",
+  "input[aria-label='Current role']": "designation",
+  "[contenteditable]": "unknown"
+}

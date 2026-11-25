@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TechExpo India 2026 | Visitor Registration</title>
+  <meta property="og:title" content="TechExpo India 2026 - Visitor Registration">
+</head>
+<body>
+  <header class="site-header"><a href="#">Home</a><form role="search"><input type="search" placeholder="Search exhibitors"></form></header>
+  <h1>Visitor Registration</h1>
+  <form id="reg" class="reg-form" action="#">
+    <div class="row">
+      <div class="col-md-6"><input type="text" class="form-control" name="visitor_name" placeholder="Full Name *" required></div>
+      <div class="col-md-6"><input type="email" class="form-control" name="email" placeholder="Email Address *" required></div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <select class="form-control" name="country_code">
+          <option value="+91">+91</option><option value="+1">+1</option><option value="+44">+44</option><option value="+971">+971</option>
+        </select>
+      </div>
+      <div class="col-md-4"><input type="tel" class="form-control" name="mobile" placeholder="Mobile Number *" maxlength="10" required></div>
+      <div class="col-md-6"><input type="text" class="form-control" name="company" placeholder="Company Name"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><input type="text" class="form-control" name="designation" placeholder="Designation"></div>
+      <div class="col-md-6">
+        <div class="dd-select" role="combobox" tabindex="0" aria-haspopup="listbox" aria-expanded="false" aria-controls="industry-list" aria-label="Industry">
+          <span class="dd-value">Select Industry</span>
+        </div>
+        <ul id="industry-list" role="listbox" hidden>
+          <li role="option" data-value="it">Information Technology</li>
+          <li role="option" data-value="mfg">Manufacturing</li>
+          <li role="option" data-value="health">Healthcare</li>
+          <li role="option" data-value="edu">Education</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><input type="text" class="form-control" name="city" placeholder="City"></div>
+      <div class="col-md-6"><ef-text label="Pin Code"></ef-text></div>
+    </div>
+    <div class="row"><div class="col-md-12"><ef-secret label="Promo"></ef-secret></div></div>
+    <button type="submit" class="btn btn-primary">Register Now</button>
+  </form>
+  <script>
+    // Open shadow root: must be scanned.
+    customElements.define('ef-text', class extends HTMLElement {
+      constructor() {
+        super();
+        const root = this.attachShadow({ mode: 'open' });
+        root.innerHTML = '<label for="inner">' + this.getAttribute('label') + '</label><input id="inner" type="text">';
+      }
+    });
+    // Closed shadow root: unreachable, must be ignored.
+    customElements.define('ef-secret', class extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({ mode: 'closed' }).innerHTML = '<input type="text" placeholder="Promo code">';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Hack the Monsoon 2026</title></head>
+<body>
+  <form class="needs-validation">
+    <div class="form-group">
+      <label for="fn">Full name <span class="req">*</span></label>
+      <input id="fn" name="full_name" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="m">Mobile Number <span class="req">*</span></label>
+      <div class="input-group"><span class="input-group-text">+91</span><input id="m" type="tel" name="mobile" maxlength="10" class="form-control" required></div>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" id="same" name="wa_same" class="form-check-input">
+      <label for="same" class="form-check-label">WhatsApp number same as mobile</label>
+    </div>
+    <div class="form-group">
+      <label for="w">WhatsApp Number</label>
+      <input id="w" type="tel" name="whatsapp" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="e">Emergency Contact Number</label>
+      <input id="e" type="tel" name="emergency_contact" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="a">Alternate Mobile Number</label>
+      <input id="a" type="tel" name="alt_mobile" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="pn">Parent / Guardian Phone</label>
+      <input id="pn" type="tel" name="parent_phone" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="tn">Team Name</label>
+      <input id="tn" name="team_name" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="ts">Team Size</label>
+      <select id="ts" name="team_size" class="form-control"><option>2</option><option>3</option><option>4</option></select>
+    </div>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</body>
+</html>

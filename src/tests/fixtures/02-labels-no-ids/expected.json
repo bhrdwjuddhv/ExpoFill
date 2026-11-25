@@ -1,0 +1,11 @@
+{
+  "form .row:nth-of-type(1) input": "fullName",
+  "input[type=email]": "email",
+  "input[type=tel]": "phone",
+  "form .row:nth-of-type(4) input": "college",
+  "form .row:nth-of-type(5) input": "course",
+  "select": "yearOfStudy",
+  "form .row:nth-of-type(7) input": "city",
+  "input[type=url]": "github",
+  "textarea": "unknown"
+}

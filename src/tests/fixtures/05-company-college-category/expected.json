@@ -1,0 +1,12 @@
+{
+  "#n": "fullName",
+  "#co": "organization",
+  "#cl": "college",
+  "#d": "designation",
+  "#dept": "department",
+  "#rc": "attendeeType",
+  "#ticket": "unknown",
+  "#exp": "experienceYears",
+  "#ind": "industry",
+  "#startup": "organization"
+}

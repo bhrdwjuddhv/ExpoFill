@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Startup Expo 2026 - Google Forms</title></head>
+<body>
+<form class="Xu9a1b">
+  <div role="heading" aria-level="1" class="F9yp7e">Startup Expo 2026 — Visitor Pass</div>
+  <div role="list" class="o3Dpx">
+    <div role="listitem" class="Qr7Oae">
+      <div class="geS5n">
+        <div role="heading" aria-level="3" class="HoXoMd" id="i1"><span>State</span><span aria-label="Required question"> *</span></div>
+        <div jscontroller="liFoG" class="vQES8d">
+          <div role="listbox" aria-expanded="false" aria-labelledby="i1" aria-required="true" class="MocG8c" tabindex="0">
+            <div class="ry3kXd">
+              <div role="option" aria-selected="true" data-value="" class="MocG8c HZ3kWc mhLiyf LMgvRb KKjvXb"><span class="vRMGwf">Choose</span></div>
+              <div role="option" aria-selected="false" data-value="Karnataka" class="MocG8c HZ3kWc mhLiyf LMgvRb"><span class="vRMGwf">Karnataka</span></div>
+              <div role="option" aria-selected="false" data-value="Maharashtra" class="MocG8c HZ3kWc mhLiyf LMgvRb"><span class="vRMGwf">Maharashtra</span></div>
+              <div role="option" aria-selected="false" data-value="Tamil Nadu" class="MocG8c HZ3kWc mhLiyf LMgvRb"><span class="vRMGwf">Tamil Nadu</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div role="listitem" class="Qr7Oae">
+      <div class="geS5n">
+        <div role="heading" aria-level="3" class="HoXoMd" id="i5"><span>T-shirt size</span></div>
+        <div role="listbox" aria-expanded="false" aria-labelledby="i5" class="MocG8c">
+          <div role="option" aria-selected="true" data-value=""><span>Choose</span></div>
+          <div role="option" aria-selected="false" data-value="S"><span>S</span></div>
+          <div role="option" aria-selected="false" data-value="M"><span>M</span></div>
+          <div role="option" aria-selected="false" data-value="L"><span>L</span></div>
+          <div role="option" aria-selected="false" data-value="XL"><span>XL</span></div>
+        </div>
+      </div>
+    </div>
+    <div role="listitem" class="Qr7Oae">
+      <div class="geS5n">
+        <div role="heading" aria-level="3" class="HoXoMd" id="i9"><span>Date of visit</span><span aria-label="Required question"> *</span></div>
+        <div class="A6uyJd"><input type="date" class="whsOnd zHQkBf" aria-labelledby="i9" aria-required="true" min="2026-01-10" max="2026-01-12"></div>
+      </div>
+    </div>
+    <div role="listitem" class="Qr7Oae">
+      <div class="geS5n">
+        <div role="heading" aria-level="3" class="HoXoMd" id="i13"><span>Date of birth</span></div>
+        <div class="PfQ8Lb">
+          <input type="text" class="whsOnd" aria-label="Day of the month" maxlength="2">
+          <input type="text" class="whsOnd" aria-label="Month" maxlength="2">
+          <input type="text" class="whsOnd" aria-label="Year" maxlength="4">
+        </div>
+      </div>
+    </div>
+    <div role="listitem" class="Qr7Oae">
+      <div class="geS5n">
+        <div role="heading" aria-level="3" class="HoXoMd" id="i17"><span>City</span></div>
+        <input type="text" class="whsOnd" aria-labelledby="i17">
+      </div>
+    </div>
+  </div>
+</form>
+<script>
+// Google Forms dropdown: click opens, click on an option selects it and shows it.
+document.querySelectorAll('[role=listbox]').forEach((lb) => {
+  lb.addEventListener('click', (e) => {
+    const opt = e.target.closest('[role=option]');
+    if (!opt) { lb.setAttribute('aria-expanded', 'true'); return; }
+    lb.querySelectorAll('[role=option]').forEach((o) => o.setAttribute('aria-selected', String(o === opt)));
+    lb.setAttribute('aria-expanded', 'false');
+  });
+});
+</script>
+</body>
+</html>

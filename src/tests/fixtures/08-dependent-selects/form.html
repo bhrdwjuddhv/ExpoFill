@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Maker Faire Pune 2026</title></head>
+<body>
+  <form id="f">
+    <div class="field"><label for="email">Email address</label><input id="email" type="email" name="email"></div>
+    <div class="field">
+      <label for="country">Country</label>
+      <select id="country" name="country"><option value="">Select Country</option><option>India</option><option>Nepal</option><option>Sri Lanka</option></select>
+    </div>
+    <div class="field">
+      <label for="state">State</label>
+      <select id="state" name="state"><option value="">Select State</option></select>
+    </div>
+    <div class="field">
+      <label for="city">City</label>
+      <select id="city" name="city"><option value="">Select City</option></select>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+  <script>
+    // Options arrive after a delay, like an XHR-backed dropdown.
+    const DATA = {
+      India: { Maharashtra: ['Mumbai', 'Pune', 'Nagpur'], Karnataka: ['Bengaluru', 'Mysuru'] },
+      Nepal: { Bagmati: ['Kathmandu', 'Lalitpur'] },
+      'Sri Lanka': { Western: ['Colombo'] },
+    };
+    const country = document.getElementById('country');
+    const state = document.getElementById('state');
+    const city = document.getElementById('city');
+    const fill = (select, placeholder, items) => {
+      select.innerHTML = '<option value="">' + placeholder + '</option>' + items.map((x) => '<option>' + x + '</option>').join('');
+    };
+    country.addEventListener('change', () => setTimeout(() => {
+      fill(state, 'Select State', Object.keys(DATA[country.value] || {}));
+      fill(city, 'Select City', []);
+    }, 300));
+    state.addEventListener('change', () => setTimeout(() => {
+      fill(city, 'Select City', (DATA[country.value] || {})[state.value] || []);
+    }, 300));
+  </script>
+</body>
+</html>

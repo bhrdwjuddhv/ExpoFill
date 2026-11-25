@@ -1,0 +1,18 @@
+# dependencies and build output
+node_modules
+.output
+.wxt
+coverage
+
+# logs and local env
+*.log
+.env
+.env.*
+
+# editors and OS
+.idea
+.vscode
+.claude/settings.local.json
+.DS_Store
+Thumbs.db
+

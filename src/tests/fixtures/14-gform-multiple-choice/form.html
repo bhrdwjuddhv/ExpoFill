@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Cloud Study Jam - Google Forms</title></head>
+<body>
+<form class="Xu9a1b">
+  <div role="heading" aria-level="1" class="F9yp7e ikZYwf">Cloud Study Jam 2026</div>
+  <div role="list" class="o3Dpx">
+    <div role="listitem" class="Qr7Oae">
+      <div class="geS5n">
+        <div role="heading" aria-level="3" class="HoXoMd" id="i3"><span>Name</span><span aria-label="Required question"> *</span></div>
+        <input type="text" class="whsOnd" aria-labelledby="i3">
+      </div>
+    </div>
+    <div role="listitem" class="Qr7Oae">
+      <div class="geS5n">
+        <div role="heading" aria-level="3" class="HoXoMd" id="i7"><span>Gender</span><span aria-label="Required question"> *</span></div>
+        <div role="radiogroup" aria-labelledby="i7" aria-required="true" class="lLfZXe fnxRtf">
+          <span class="H2Gmcc"><label class="ajBQVb"><div class="Od2TWd hYsg7c" role="radio" data-value="Male" aria-label="Male" tabindex="0" aria-checked="false"></div><span class="aDTYNe">Male</span></label></span>
+          <span class="H2Gmcc"><label class="ajBQVb"><div class="Od2TWd hYsg7c" role="radio" data-value="Female" aria-label="Female" tabindex="-1" aria-checked="false"></div><span class="aDTYNe">Female</span></label></span>
+          <span class="H2Gmcc"><label class="ajBQVb"><div class="Od2TWd hYsg7c" role="radio" data-value="Prefer not to say" aria-label="Prefer not to say" tabindex="-1" aria-checked="false"></div><span class="aDTYNe">Prefer not to say</span></label></span>
+        </div>
+      </div>
+    </div>
+    <div role="listitem" class="Qr7Oae">
+      <div class="geS5n">
+        <div role="heading" aria-level="3" class="HoXoMd" id="i15"><span>Which year are you in?</span></div>
+        <div role="radiogroup" aria-labelledby="i15" class="lLfZXe">
+          <label><div role="radio" data-value="1st Year" aria-label="1st Year" aria-checked="false"></div><span>1st Year</span></label>
+          <label><div role="radio" data-value="2nd Year" aria-label="2nd Year" aria-checked="false"></div><span>2nd Year</span></label>
+          <label><div role="radio" data-value="3rd Year" aria-label="3rd Year" aria-checked="false"></div><span>3rd Year</span></label>
+          <label><div role="radio" data-value="4th Year" aria-label="4th Year" aria-checked="false"></div><span>4th Year</span></label>
+        </div>
+      </div>
+    </div>
+    <div role="listitem" class="Qr7Oae">
+      <div class="geS5n">
+        <div role="heading" aria-level="3" class="HoXoMd" id="i25"><span>You are a</span><span aria-label="Required question"> *</span></div>
+        <div role="radiogroup" aria-labelledby="i25" class="lLfZXe">
+          <label><div role="radio" data-value="Student" aria-label="Student" aria-checked="false"></div><span>Student</span></label>
+          <label><div role="radio" data-value="Working Professional" aria-label="Working Professional" aria-checked="false"></div><span>Working Professional</span></label>
+          <label><div role="radio" data-value="__other_option__" aria-label="Other:" aria-checked="false"></div><span>Other:</span></label>
+          <input type="text" class="Hvn9fb" aria-label="Other response" dir="auto">
+        </div>
+      </div>
+    </div>
+    <div role="listitem" class="Qr7Oae">
+      <div class="geS5n">
+        <div role="heading" aria-level="3" class="HoXoMd" id="i33"><span>How did you hear about this event?</span></div>
+        <div role="radiogroup" aria-labelledby="i33" class="lLfZXe">
+          <label><div role="radio" data-value="LinkedIn" aria-label="LinkedIn" aria-checked="false"></div><span>LinkedIn</span></label>
+          <label><div role="radio" data-value="Instagram" aria-label="Instagram" aria-checked="false"></div><span>Instagram</span></label>
+          <label><div role="radio" data-value="College club" aria-label="College club" aria-checked="false"></div><span>College club</span></label>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<script>
+// Google Forms behaviour: radios are exclusive within a radiogroup, checkboxes toggle.
+document.addEventListener('click', (e) => {
+  const radio = e.target.closest('[role=radio]');
+  if (radio) radio.closest('[role=radiogroup]').querySelectorAll('[role=radio]').forEach((r) => r.setAttribute('aria-checked', String(r === radio)));
+  const box = e.target.closest('[role=checkbox]');
+  if (box) box.setAttribute('aria-checked', String(box.getAttribute('aria-checked') !== 'true'));
+});
+</script>
+</body>
+</html>

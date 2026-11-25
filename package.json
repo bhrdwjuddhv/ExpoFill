@@ -1,0 +1,32 @@
+{
+  "name": "expofill",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Fills event registration forms from a profile stored only on your device.",
+  "scripts": {
+    "dev": "wxt",
+    "dev:edge": "wxt -b edge",
+    "privacy-check": "node scripts/privacy-check.js",
+    "build": "node scripts/privacy-check.js && wxt build",
+    "zip": "npm run build && wxt zip",
+    "test": "node scripts/vitest.js run",
+    "test:watch": "node scripts/vitest.js",
+    "postinstall": "wxt prepare"
+  },
+  "dependencies": {
+    "@fontsource/dm-sans": "^5.3.0",
+    "@fontsource/shrikhand": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@wxt-dev/module-react": "^1.2.2",
+    "autoprefixer": "^10.7.0",
+    "jsdom": "^29.1.1",
+    "postcss": "^8.5.33",
+    "tailwindcss": "^3.4.19",
+    "vitest": "^5.1.1",
+    "wxt": "^0.21.5"
+  }
+}

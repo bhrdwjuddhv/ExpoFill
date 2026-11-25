@@ -1,0 +1,12 @@
+{
+  "input[name=visitor_name]": "fullName",
+  "input[name=email]": "email",
+  "select[name=country_code]": "phoneCountryCode",
+  "input[name=mobile]": "phone",
+  "input[name=company]": "organization",
+  "input[name=designation]": "designation",
+  "[role=combobox]": "industry",
+  "input[name=city]": "city",
+  "Pin Code": "postalCode",
+  "input[type=search]": "excluded"
+}

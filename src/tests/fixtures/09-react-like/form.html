@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>DevConf Hyderabad 2026</title></head>
+<body>
+  <div id="root">
+    <form class="css-1q2w3e">
+      <div class="MuiFormControl-root css-8u7y6t">
+        <label id="lbl-name" class="MuiInputLabel-root css-0p9o8i">Full name</label>
+        <div class="MuiInputBase-root css-2w3e4r"><input aria-labelledby="lbl-name" class="MuiInputBase-input css-5t6y7u" value=""></div>
+      </div>
+      <div class="MuiFormControl-root css-8u7y6t">
+        <label id="lbl-email" class="MuiInputLabel-root css-0p9o8i">Work email</label>
+        <div class="MuiInputBase-root css-2w3e4r"><input type="email" aria-labelledby="lbl-email" class="MuiInputBase-input css-5t6y7u" value=""></div>
+      </div>
+      <div class="MuiFormControl-root css-8u7y6t">
+        <div class="MuiInputBase-root css-2w3e4r"><input type="tel" aria-label="Phone number" class="MuiInputBase-input css-5t6y7u" value=""></div>
+      </div>
+      <div class="MuiFormControl-root css-8u7y6t">
+        <div class="MuiInputBase-root css-2w3e4r"><input aria-label="Current role" class="MuiInputBase-input css-5t6y7u" value=""></div>
+      </div>
+      <div class="css-9i8u7y">
+        <span id="bio-l">Tell us about yourself</span>
+        <div contenteditable="true" aria-labelledby="bio-l" class="editor css-1a2s3d"></div>
+      </div>
+      <button type="submit" class="MuiButton-root">Continue</button>
+    </form>
+  </div>
+  <script>
+    // Simulates a React-controlled input: on blur the value reverts to component state,
+    // and state only updates from 'input' events. A fill that skips events will not stick.
+    document.querySelectorAll('input').forEach((el) => {
+      let state = el.value;
+      el.addEventListener('input', () => { state = el.value; });
+      el.addEventListener('blur', () => { if (el.value !== state) el.value = state; });
+    });
+  </script>
+</body>
+</html>

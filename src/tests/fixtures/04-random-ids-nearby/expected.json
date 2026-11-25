@@ -1,0 +1,10 @@
+{
+  "#input_8f3a2": "fullName",
+  "#field_17": "email",
+  "input[name=a9c4e7b2d1]": "phone",
+  "input[name='ctl00$x41']": "college",
+  "input[name=fld_3312]": "course",
+  "select": "graduationYear",
+  "input[name=u_5512]": "tshirtSize",
+  "input[name=x_88213]": "postalCode"
+}
